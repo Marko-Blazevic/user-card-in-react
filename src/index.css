@@ -4,13 +4,9 @@
 
 html {
   font-family: sans-serif;
+  background-color: rgb(26, 26, 26);
 }
 
 body {
   margin: 0;
-  /* width: 100vw; */
-  background-color: rgb(26, 26, 26);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
