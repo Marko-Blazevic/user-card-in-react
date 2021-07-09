@@ -3,7 +3,7 @@ import AddUser from './Users/AddUser';
 import UsersList from './Users/UsersList';
 
 function App() {
-  const [userList, setUserList] = useState([]);
+  const [userList, setUserList] = useState('');
 
   const addUserHandler = (userName, userAge) => {
     setUserList((previousUserList) => {
@@ -17,7 +17,7 @@ function App() {
   return (
     <React.Fragment>
       <AddUser onAddUser={addUserHandler} />
-      <UsersList users={userList} />
+      {userList && <UsersList users={userList} />}
     </React.Fragment>
   );
 }
