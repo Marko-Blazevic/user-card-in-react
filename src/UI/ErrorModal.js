@@ -7,11 +7,7 @@ const ErrorModal = (props) => {
   return (
     <React.Fragment>
       {ReactDOM.createPortal(
-        <Backdrop
-          title={props.title}
-          message={props.message}
-          errorHandler={props.errorHandler}
-        />,
+        <Backdrop errorHandler={props.errorHandler} />,
         document.getElementById('backdrop')
       )}
       {ReactDOM.createPortal(
