@@ -14,10 +14,17 @@ function App() {
     });
   };
 
+  const removeUserHandler = (id) => {
+    const reducedUserList = userList.filter((user) => user.id !== id);
+    setUserList(reducedUserList);
+  };
+
   return (
     <React.Fragment>
       <AddUser onAddUser={addUserHandler} />
-      {userList && <UsersList users={userList} />}
+      {userList && (
+        <UsersList users={userList} onRemoveUser={removeUserHandler} />
+      )}
     </React.Fragment>
   );
 }

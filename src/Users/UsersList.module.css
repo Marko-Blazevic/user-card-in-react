@@ -10,7 +10,11 @@
 }
 
 .users li {
+  height: 50px;
   border: 1px solid #ccc;
   margin: 0.5rem 0;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
 }
